@@ -1,0 +1,34 @@
+.mat-drawer-container {
+    height: 100vh;
+}
+
+.mat-sidenav-custom {
+    width: 300px;
+}
+
+.mat-sidnav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    height: 64px;
+}
+
+.mat-sidnav-logo-img {
+    height: 55px;
+    width: 75px;
+    object-fit: contain;
+}
+
+.mat-icon-custom {
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+span {
+    margin-right: 16px;
+    margin-left: 16px;
+}
