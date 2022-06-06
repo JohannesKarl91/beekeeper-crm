@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "beekeeper-crm": {
+      "hosting": {
+        "beekeeper-crm": [
+          "beekeeper-crm"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "beekeeper-crm"
+  }
+}
