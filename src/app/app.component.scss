@@ -2,8 +2,37 @@
     height: 100vh;
 }
 
+.mat-sidenav-content {
+    height: 64px;
+    min-height: 64px;
+}
+
 .mat-sidenav-custom {
     width: 300px;
+
+    li {
+        padding-right: 16px;
+        padding-left: 16px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        list-style-type: none;
+        cursor: pointer;
+        font-weight: bold;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+
+        mat-icon{
+            padding-right: 16px;
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
 }
 
 .mat-sidnav-logo {
@@ -12,11 +41,13 @@
     align-items: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     height: 64px;
+    min-height: 64px;
+    cursor: pointer;
 }
 
 .mat-sidnav-logo-img {
     height: 55px;
-    width: 75px;
+    width: 60px;
     object-fit: contain;
 }
 
@@ -31,4 +62,11 @@
 span {
     margin-right: 16px;
     margin-left: 16px;
+}
+
+.router-container{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 56px;
+    padding-right: 56px;
 }

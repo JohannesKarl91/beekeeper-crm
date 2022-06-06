@@ -1,18 +1,29 @@
 <mat-drawer-container class="mat-drawer-container" autosize>
   <mat-drawer #drawer class="mat-sidenav-custom" [opened]="true" mode="side">
-    <div class="mat-sidnav-logo">
+    <div routerLink="/" class="mat-sidnav-logo">
       <img class="mat-sidnav-logo-img" src="/assets/beekeeper_logo.png">
     </div>
-    <p>Auto-resizing sidenav</p>
+    
+    <div style="margin-left: 0px;">
+      <li routerLink="/dashboard">
+        <mat-icon class="li-icon">dashboard</mat-icon>Dashboard
+      </li>
+      <li routerLink="/user">
+        <mat-icon class="li-icon">perm_identity</mat-icon>User
+      </li>
+    </div>
   </mat-drawer>
 
-  <div class="example-sidenav-content">
+  <div class="mat-sidenav-content">
     <mat-toolbar color="primary">
-      <mat-toolbar-row class="mat-toolbar-custom">
+      <mat-toolbar-row>
         <mat-icon (click)="drawer.toggle()" class="mat-icon-custom">menu</mat-icon>
-        <span>Custom Toolbar</span>
+        <span>Beekeeper CRM</span>
       </mat-toolbar-row>
     </mat-toolbar>
-  </div>
 
+    <div class="router-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </mat-drawer-container>
