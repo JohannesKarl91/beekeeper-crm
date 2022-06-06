@@ -4,19 +4,19 @@
     <div>
         <mat-form-field appearance="outline" class="mrg-right">
             <mat-label>First Name</mat-label>
-            <input matInput placeholder="Please insert your first name ...">
+            <input matInput placeholder="Please insert your first name ..." [(ngModel)]="user.firstName">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Last Name</mat-label>
-            <input matInput placeholder="Please insert your last name ...">
+            <input matInput placeholder="Please insert your last name ..." [(ngModel)]="user.lastName">
         </mat-form-field>
     </div>
 
     <div>
         <mat-form-field appearance="outline">
             <mat-label>Birth Date</mat-label>
-            <input matInput placeholder="Please pick your birth date ..." matInput [matDatepicker]="picker">
+            <input matInput placeholder="Please pick your birth date ..." matInput [matDatepicker]="picker" [(ngModel)]="birthDate">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
@@ -26,21 +26,21 @@
         <div>
             <mat-form-field appearance="outline" class="mrg-right">
                 <mat-label>Street</mat-label>
-                <input matInput placeholder="Please insert your street name ...">
+                <input matInput placeholder="Please insert your street name ..." [(ngModel)]="user.street">
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>House No.</mat-label>
-                <input matInput placeholder="Please insert your house number ...">
+                <input matInput placeholder="Please insert your house number ..." [(ngModel)]="user.houseNumber">
             </mat-form-field>
         </div>
         <div>
             <mat-form-field appearance="outline" class="mrg-right">
                 <mat-label>ZIP Code</mat-label>
-                <input matInput placeholder="Please insert your ZIP code ...">
+                <input matInput placeholder="Please insert your ZIP code ..." [(ngModel)]="user.zipCode">
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>City</mat-label>
-                <input matInput placeholder="Please insert city name ...">
+                <input matInput placeholder="Please insert city name ..." [(ngModel)]="user.city">
             </mat-form-field>
         </div>
     </div>
@@ -48,5 +48,5 @@
 
 <div mat-dialog-actions>
     <button mat-button>Cancel</button>
-    <button mat-button cdkFocusInitial>Save</button>
+    <button mat-button cdkFocusInitial (click)="saveUser()">Save</button>
 </div>
