@@ -1,5 +1,10 @@
+import { OverlayModule } from '@angular/cdk/overlay';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatMenu, MatMenuModule } from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import { UserDetailComponent } from './user-detail.component';
 
 describe('UserDetailComponent', () => {
@@ -8,9 +13,11 @@ describe('UserDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserDetailComponent ]
+      imports: [AngularFireModule.initializeApp(environment.firebase), MatMenuModule, MatDialogModule, OverlayModule, RouterModule.forRoot([])],
+      declarations: [UserDetailComponent],
+      providers: [MatDialog]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
